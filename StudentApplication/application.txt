@@ -1,0 +1,86 @@
+HTML is HyperText MarkUp Language. HTML describes the structrure of a Web page, so first I make a html file.
+With <!DOCTYPE html> declaration I define this document to be HTML5.
+
+I use <head></head> tag to define meta information.
+<head>
+//Title tag contains name of Application. 
+   <title>
+       Application
+    </title>
+       //  Link to the css file        
+    <link rel="stylesheet" href="styles.css">
+       //Bootstrap Library
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+</head>
+
+//Main Heading- I dont have main heading. For example in this case it will be simple <heading1> tag with name of 
+web page. 
+
+//Data Entry Form-
+// I use form attribute. This attribute is new in HTML5. It specifies one or more forms the label belongs to.
+ <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    //The <div> tag is container for content. It has effect using CSS.
+                      <div>
+                      //The <label> tag defines label for a <input>, <textarea>, <button>... 
+                        <label>Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                       //The <input> tag is used in order to accept data from the user in this case we accept text (type="text") 
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+
+
+//The <select> tag provides a menu of options
+ <select id="level" name="level">
+                       <option value="Choose an option"></option>
+                       <option value="1">Begginer</option>
+                       <option value="2">Elementary</option>
+                       <option value="3">Intermediate</option>
+                       <option value="4">Advanced</option>
+                    </select>
+
+//The input type="date defines a date picker
+
+//The <input type="checkbox"> defines a checkbox. The checkbox is shown as a square box that is checked when activated.
+ <label ><input type="checkbox" name ="checkbox"  id="checkbox" value="">Study from home:</label>
+
+// The <input type="submit">  is displayed as the button's label.
+  <input type="submit" value="Submit">
+
+// I use <table> tag to create a table. Table will store information about student.
+ <table class="list" id="employeeList">
+
+//Link to the javascript file
+<script src="script.js"></script>
+
+CSS is a language that describes the style of a HTML document. I use selectors to point the HTML element I wanto to style.
+I use class and id selector.
+body selector styles a body of A html document
+table selector styles a table of A html document
+td,th styles a header cell , and other cells in the html document
+//This sets different background color to all even (or odd) table rows.
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+}
+
+// I use this selector to style every input tag where type is define to be text or number.
+input[type=text], input[type=number]
+
+//I use this selector to style buttons.
+input[type=submit]
+
+//
+form div.form-action-buttons{
+    text-align: right;
+}
+
+JavaScript is the programming language of HTML and the Web. JS program behavior of pages.
+We have function onFormSubmit. This function validate information that we insert from page.
+I validate just name. After that we call function readFormData. ReadFormData function get information from page
+and return them. Then if next row in table is empty we call function insertNewRecord. Function
+inserNewRecord creates new row in table and put new information in table about new student, and puts two
+button edit and delete.
+In JS file we have two more function . One for edit information from table. We use selected row to get information 
+about student and change it and onDelete function just delete selected row.
+
+
+                    
+                    

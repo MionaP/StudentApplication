@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+     
+<head>
+
+  <title>
+       Application
+    </title>
+                 
+    <link rel="stylesheet" href="styles.css">
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <table id="background">
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+
+                    <div>
+                        <label>Email*</label><label class="validation-error hide" id="emailValidationError">This field is required.</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+
+                    <div>
+                        <label>Age*</label><label class="validation-error hide" id="ageValidationError">This field is required.</label>
+                        <input type="text" name="age" id="age">
+                    </div>
+
+                    <div>
+                        <label>Phone Number*</label><label class="validation-error hide" id="phoneNumberValidationError">This field is required.</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber">
+                    </div>
+
+                     <div>
+                     <label>English Level*</label><label class="validation-error hide" id="levelValidationError">This field is required.</label>
+                     <select id="level" name="level">
+                       <option value=""></option>
+                       <option value="1">Begginer</option>
+                       <option value="2">Elementary</option>
+                       <option value="3">Intermediate</option>
+                       <option value="4">Advanced</option>
+                    </select>
+                    </div>
+
+                    <div>
+                       
+                    <label>Start date:</label>
+                    <input type="date" id="date" value="2019-10-09">
+                    </div>
+
+
+                    <div>
+                     <label>Techical skills*</label><label class="validation-error hide" id="skillValidationError">This field is required.</label>
+                     <select id="skill" name="skill">
+                       <option value=""></option>
+                       <option value="1">Skill1</option>
+                       <option value="2">Skill2</option>
+                       <option value="3">Skill3</option>
+                       <option value="4">Skill4</option>
+                    </select>
+                    </div>
+
+                    <div>
+                        <label>Short Personal Presentation</label>
+                        <input type="text" name="information" id="information">
+                    </div>
+
+                    <label ><input type="checkbox" name ="checkbox"  id="checkbox" value="">Study from home:</label>
+                   
+                
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Phone Number</th>
+                            <th>English level</th>
+                            <th>Date</th>
+                            <th>Techical skills</th>
+                            <th>Information:</th>
+                            <th>CheckBox</th>
+                            <th>Edit/Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
